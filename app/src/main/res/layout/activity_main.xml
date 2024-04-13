@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E9F6EE"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/header_one"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="ПРИЛОЖЕНИЕ АЛЬБОМ 1.0"
+        android:layout_marginTop="10dp"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        android:textColor="#177C3A"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--    кастомизированное View-->
+    <com.msaggik.fourthlessonalbum11.AlbumView
+        android:id="@+id/album"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/buttons"
+        android:layout_width="71dp"
+        android:layout_height="354dp"
+        android:background="@drawable/shape"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/button_line"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="10dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@android:drawable/button_onoff_indicator_on" />
+
+        <ImageButton
+            android:id="@+id/button_circle"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="10dp"
+            android:background="@null"
+            android:backgroundTint="@null"
+            android:backgroundTintMode="add"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/circle" />
+
+        <ImageButton
+            android:id="@+id/button_palette"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="10dp"
+            android:background="@null"
+            android:backgroundTint="@null"
+            android:backgroundTintMode="add"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/palette" />
+
+        <ImageButton
+            android:id="@+id/button_clear"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="10dp"
+            android:background="@null"
+            android:backgroundTint="@null"
+            android:backgroundTintMode="add"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/clear_screen" />
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/button_tools"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="centerCrop"
+        android:background="@null"
+        android:backgroundTint="@null"
+        android:backgroundTintMode="add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/tools" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
